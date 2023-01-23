@@ -1,0 +1,12 @@
+Dependências:
+
+npm i styled-components
+npm i @types/styled-components -D
+npm i phosphor-react
+npm i @radix-ui/react-dialog
+npm i @radix-ui/react-radio-group
+
+-------------------
+Dialog:
+
+É uma biblioteca do react direcionada a criação de componente com acessibilidade.
