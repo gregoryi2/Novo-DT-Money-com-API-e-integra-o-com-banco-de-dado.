@@ -5,8 +5,54 @@ npm i @types/styled-components -D
 npm i phosphor-react
 npm i @radix-ui/react-dialog
 npm i @radix-ui/react-radio-group
+npm i json-server -D
+npm i react-hook-form
+npm i zod
+npm i @hookform/resolvers
 
--------------------
+-----------------------------------------------
 Dialog:
 
 É uma biblioteca do react direcionada a criação de componente com acessibilidade.
+
+-----------------------------------------------
+npx json-server server.json -p 3333 -w -d 500
+
+O script acima serve para iniciar o servidor a partir do arquivo server.json na porta 3333, o "-w" serve para o servidor ficar monitorando alterações e o "-d 500" para o servidor levar 500 milisegundos para fazer qualquer requisição.
+
+Uma maneira de filtrar na url do servidor:
+
+utilizar: "?type=income" logo após a url principal de rota, sendo "?" indicando que será feita uma busca pelo "type", um atributo que está presente no servidor e que o tipo dele é "income". Exemplo:
+
+localhost:3333/transactionstype=income
+
+filtrar por ordem crescente:
+?_sort=createdAt
+
+Filtrar por ordem decrescente:
+?_sort=createdAt&_order=desc
+
+Busca por palavra especifica que esteja contida em algum campo do servidor:
+?q=palavra
+
+-----------------------------------------------
+A maneira correta de utilizar o método fetch no react, é através do useEffect que tendo passado um array vazio como parâmetro, a requisição só será feita uma única vez ou quando for passada alguma instrulção. Exemplo: 
+
+useEffect(() => {
+   fetch('url aqui')
+      .then(responser => {
+         console.log})
+}, [])
+
+useEffect não pode ser asincrono, mas pode ter uma chamada de uma função que é asincrona.
+
+----------------------------------------------
+Query:
+a palavra refere-se a uma busca por vários campos.
+
+----------------------------------------------
+Tipo enum:
+
+type: z.enum(['income', 'outcome'])
+
+serve para definir uma espécie de booleano mas que você escolhe os parâmetros.
