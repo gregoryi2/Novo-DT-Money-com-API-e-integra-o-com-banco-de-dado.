@@ -32,8 +32,8 @@ npm run dev
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/gregoryi2/dtmoney/master/Print.png">
+<img src="[https://raw.githubusercontent.com/gregoryi2/dtmoney/master/Print.png](https://raw.githubusercontent.com/gregoryi2/Novo-DT-Money-com-API-integrado-com-banco-de-dado./master/print1.png)">
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/gregoryi2/dtmoney/master/Print%202.png">
+<img src="[https://raw.githubusercontent.com/gregoryi2/dtmoney/master/Print%202.png](https://raw.githubusercontent.com/gregoryi2/Novo-DT-Money-com-API-integrado-com-banco-de-dado./master/print2.png)">
