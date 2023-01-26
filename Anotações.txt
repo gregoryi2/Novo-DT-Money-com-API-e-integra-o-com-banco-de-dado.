@@ -9,6 +9,9 @@ npm i json-server -D
 npm i react-hook-form
 npm i zod
 npm i @hookform/resolvers
+npm i axios
+npm i eslint @rocketseat/eslint-config -D
+npm i use-context-selector scheduler
 
 -----------------------------------------------
 Dialog:
@@ -56,3 +59,39 @@ Tipo enum:
 type: z.enum(['income', 'outcome'])
 
 serve para definir uma espécie de booleano mas que você escolhe os parâmetros.
+
+-----------------------------------------------
+useContextSelector:
+
+const transactions = useContextSelector(NomeDoContexto, (context) =>{
+   return context.transactions
+})
+
+Como visto no exemplo acima, serve para receber um contexto, e retornar somente o que será utilizado do mesmo, assim evitando recarregamento desnecessarios de componentes.
+
+-----------------------------------------------
+useCallback(() => {},[])
+
+Com a mesma sintaxe do useEffect, ele serve para que uma função não seja recarregada caso ela não tenha sido atualizada com algum dado novo ou alterada.
+
+Caso a função passada como primeiro parâmetro nessecite de uma variável externa, essa variável deverá ser passada como parâmetro no array indicado acima, caso a variável não seja passada, a função será atualizada com valores desatualizados dessa função.
+
+------------------------------------------------
+Como funciona o React e quando usar o MEMO:
+
+**
+* Por que um componente renderiza?
+* - Hooks changed (mudou estado, contexto, reducer);
+* - Props changed (mudou propriedades);
+* - Parent rerendered (componente pai renderizou);
+*
+* Qual o fluxo de renderização?
+* 1. O React recria o HTML da interface daquele componente
+* 2. Compara a versão do HTML recriada com a versão anterior
+* 3. Se mudou alguma coisa, ele reescreve o HTML na tela
+*
+*Memo:
+* 0. Hooks changed, Props changed (deep comparison)
+* 0.1: Comparar a versão anterior dos hooks e props
+* 0.2: Se mudou algo, ele vai permitir a nova renderização
+**
