@@ -4,7 +4,7 @@ Atualização de uma aplicação de controle de finanças feita com React e Type
 O desenvolvimento deste aplicativo faz parte do exercício do Bootcamp da Rocketseat.
 <br><br>
 
-<h2>Instale as seguintes dependências antes de rodar o projeto:</h2>
+<h2>Bibliotecas e Dependências:</h2>
 
 <p>1º) - styled-components</p>
 <p>2º) - @types/styled-components -D</p>
